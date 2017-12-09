@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title>Statistics</title>
+</head>
+<body>
+<h1>Статистика</h1>
+<h4>В таблице ns означает конструкции вида "Столярный переулок", sn - конструкции вида "переулок Столярный"</h4>
+<table border='1'>
+<tr>
+<td>Имя</td>
+<td>Пол</td>
+<td>Возраст</td>
+<td>Город</td>
+<td>Образование</td>
+<td>Ленина</td>
+<td>Гороховая</td>
+<td>Столярный</td>
+<td>Верхняя</td>
+<td>Западный</td>
+<td>Черепичный</td>
+<td>Невский</td>
+<td>Красный</td>
+<td>35-я</td>
+</tr>
+<tr>
+{% for dic  in statdic %}
+<td>{% for key, value in dic.items() %}
+{{ key }} ({{value}}) <br />
+{% endfor %}
+</td>
+{% endfor%}
+</tr>
+</table>
+</body>
+</html>
