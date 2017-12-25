@@ -18,7 +18,7 @@ def make_arrrr():
             partofarr[0] = partofarr[0].split('</td><td>')[0]
             for i, item in enumerate(partofarr):
                 partofarr[i] = re.sub('<(.+?)>', '', item.strip('&#1234567890">;')).strip('</atd')
-            arrfordic[partofarr[0]] = partofarr[2]
+            arrfordic[partofarr[0]] = partofarr[2].split(';')[0]
     print(arrfordic)
 
 make_arrrr()
