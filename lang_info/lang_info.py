@@ -42,8 +42,6 @@ def makeit():
 ### потому что формат строки "Википедия + ссылка" разнится по таблицам разных языков
 ###(один столбец или два), а сделать так, чтобы оно считало столбцы, я не успею
     del langinf['overall']
-    for codic in sorted(langinf):
-        print(codic, ' for ', langinf[codic])
     return(langinf)
 
 @app.route('/') 
