@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск по названию языка</title>
+</head>
+<body>
+<h1>Информация о языке</h1>
+<ul>
+    {% for quest, ans in langinfo.items() %}
+        <li>{{ quest }}	{{ ans }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>
