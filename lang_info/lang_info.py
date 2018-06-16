@@ -46,9 +46,9 @@ def makeit():
 
 @app.route('/') 
 def langinfo(): 
-    database = makeit() 
-    infor = {} 
-    if request.args: 
+    if request.args:
+        database = makeit() 
+        infor = {} 
         req = request.args['language'].lower() 
         for code in database: 
             if (re.match(req, database[code]['Язык:'].lower()) or re.search(req, database[code]['Самоназвание:'].lower())): 
